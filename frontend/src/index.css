@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "basecoat-css";
+@import "../theme.css";
+
+@tailwind utilities;
+
+iconify-icon {
+  display: inline-block;
+  vertical-align: text-top;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "maftil",
+  "outputfilename": "maftil",
+  "frontend:install": "bun install",
+  "frontend:build": "bun run build",
+  "frontend:dev:watcher": "bun run dev",
+  "frontend:dev:serverUrl": "auto",
+  "assetdir": "./frontend/dist",
+  "author": {
+    "name": "RVFET",
+    "email": "me@rvfet.com"
+  }
+}

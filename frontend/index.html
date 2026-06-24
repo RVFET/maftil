@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+  <title>Solid App</title>
+
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('themeMode');
+        if (stored ? stored === 'dark'
+          : matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) { }
+
+      const apply = dark => {
+        document.documentElement.classList.toggle('dark', dark);
+        try { localStorage.setItem('themeMode', dark ? 'dark' : 'light'); } catch (_) { }
+      };
+
+      document.addEventListener('basecoat:theme', (event) => {
+        const mode = event.detail?.mode;
+        apply(mode === 'dark' ? true
+          : mode === 'light' ? false
+            : !document.documentElement.classList.contains('dark'));
+      });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "j") {
+        e.preventDefault();
+        const dialog = document.getElementById("commandbar");
+        if (dialog.open) {
+          dialog.close();
+        } else {
+          dialog.showModal();
+          dialog.querySelector("header input")?.focus();
+        }
+      }
+    });
+  </script>
+</head>
+
+<body class="mt-12 px-4">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script src="/src/index.jsx" type="module"></script>
+</body>
+
+</html>
