@@ -4,11 +4,12 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
+      class="btn"
+      data-variant="outline"
       aria-label="Toggle dark mode"
       data-tooltip="Toggle dark mode"
       data-side="bottom"
       onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
-      class="btn-icon-outline size-8"
     >
       <span class="hidden dark:block">
         <Icon icon="mdi:white-balance-sunny" height="1em" />
