@@ -1,7 +1,11 @@
 {
   "name": "maftil",
-  "version": "0.0.1",
+  "version": "0.0.21",
   "description": "Modern Network Intelligence and Offensive Security Suite Utilizing ARP Poisoning.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvfet/maftil"
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -17,7 +21,7 @@
   "dependencies": {
     "@iconify-solid/mdi": "^1.0.2",
     "@tailwindcss/vite": "^4.3.1",
-    "basecoat-css": "^1.0.0",
+    "basecoat-css": "^1.0.1",
     "solid-js": "^1.9.13"
   },
   "author": "RVFET",

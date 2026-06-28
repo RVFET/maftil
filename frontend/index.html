@@ -48,10 +48,19 @@
   </script>
 </head>
 
-<body class="mt-1 p-4">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
+  <script>
+    let tags = ["div", "p", "span", "svg", "img", "i", "b", "button", "input"];
+    document.addEventListener("dblclick", e => {
+      let el = e.target;
+      if (tags.includes(el.tagName.toLowerCase())) {
+        el.style.outline = el.style.outline == "1px solid red" ? "" : "1px solid red"
+      }
+    }, true)
+  </script>
   <script src="/src/index.jsx" type="module"></script>
 </body>
 

@@ -9,3 +9,29 @@ iconify-icon {
   display: inline-block;
   vertical-align: -0.125em;
 }
+
+:root {
+  --titlebar-height: 42px;
+  --app-roundness: 12px;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  background: transparent !important;
+  border-radius: var(--app-roundness);
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  border-radius: var(--app-roundness);
+}
+
+.titlebar-logo svg {
+  width: 30px;
+  height: auto;
+  color: inherit;
+}

@@ -1,16 +1,19 @@
-import { CommandBar } from "./components/CommandBar/CommandBar";
-import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
+import { onMount } from "solid-js";
+import { GetPlatform } from "../wailsjs/go/main/App";
+import { TitleBar } from "./components/TitleBar/TitleBar";
 
-function App() {
+export default function App() {
+  onMount(async () => {
+    const p = await GetPlatform();
+    document.body.classList.add(`platform-${p}`);
+  });
+
   return (
     <>
-      <div>
-        <ThemeToggle />
-      </div>
-
-      <CommandBar />
+      <TitleBar />
+      <main class="bg-background w-screen h-[calc(100vh-var(--titlebar-height))]">
+        Hello world!
+      </main>
     </>
   );
 }
-
-export default App;

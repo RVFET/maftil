@@ -7,7 +7,7 @@
       "dependencies": {
         "@iconify-solid/mdi": "^1.0.2",
         "@tailwindcss/vite": "^4.3.1",
-        "basecoat-css": "^1.0.0",
+        "basecoat-css": "^1.0.1",
         "solid-js": "^1.9.13",
       },
       "devDependencies": {
@@ -158,7 +158,7 @@
 
     "babel-preset-solid": ["babel-preset-solid@1.9.12", "", { "dependencies": { "babel-plugin-jsx-dom-expressions": "^0.40.6" }, "peerDependencies": { "@babel/core": "^7.0.0", "solid-js": "^1.9.12" }, "optionalPeers": ["solid-js"] }, "sha512-LLqnuKVDlKpyBlMPcH6qEvs/wmS9a+NczppxJ3ryS/c0O5IiSFOIBQi9GzyiGDSbcJpx4Gr87jyFTos1MyEuWg=="],
 
-    "basecoat-css": ["basecoat-css@1.0.0", "", {}, "sha512-3Va6O8TdJOIpRNF5vMKQpeh51cgykkDu4KFSwEQJ/sjTBi2zxyREOv5jCgvY1ElSHVQbIN+KeKhlsQIKQiaZ2A=="],
+    "basecoat-css": ["basecoat-css@1.0.1", "", {}, "sha512-iFwj7JzoThIMTP8WXhTg227aXgTmSiCghVDoJdLY8g5PMdtNdCyV2R1OynObxTfkO2hfFnasIyrSeoUvbMJdcQ=="],
 
     "baseline-browser-mapping": ["baseline-browser-mapping@2.10.38", "", { "bin": { "baseline-browser-mapping": "dist/cli.cjs" } }, "sha512-31/02mVB4yuQU6adKk5SlY6m+mxDwUq5KZkyYgnLrrKl7TEm1+3PyDtDBz2kOv/wxZz41GHsvV1A/u6RmiyBvw=="],
 

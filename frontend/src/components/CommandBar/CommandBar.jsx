@@ -1,17 +1,18 @@
 import { Icon } from "@iconify-icon/solid";
+import { Button } from "../Button/Button";
 
 export function CommandBar() {
   return (
     <>
-      <button
+      <Button
         type="button"
         class="btn"
         data-variant="outline"
-        onclick="document.getElementById('commandbar').showModal()"
+        onclick={() => document.getElementById("commandbar").showModal()}
       >
         Open commandbar
         <kbd class="kbd">⌘J</kbd>
-      </button>
+      </Button>
 
       <dialog
         id="commandbar"
